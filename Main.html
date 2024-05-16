@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GS Inventory</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- TOP PANEL -->
+    <div class="sg-title">
+      <img src="fontbolt__1_-removebg-preview.png" al="logo" />
+      <i class="bx bx-menu" id="btn"></i>
+      <button class="logout">Log Out</button>
+    </div>
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <ul class="nav-list">
+        <li class="dashboard">
+          <a
+            id="dashboard-link"
+            href="#dashboard-scene"
+            onclick="showScene('dashboard-link')"
+            >Dashboard</a
+          >
+          <i class="bx bx-grid-alt"></i>
+        </li>
+        <li class="inventory">
+          <a
+            id="inventory-link"
+            href="#inventory-scene"
+            onclick="showScene('inventory-link')"
+            >Inventory</a
+          >
+          <i class="bx bx-clipboard"></i>
+        </li>
+        <li class="product">
+          <a
+            id="products-link"
+            href="#products-scene"
+            onclick="showScene('products-link')"
+            >Products</a
+          >
+          <i class="bx bx-box"></i>
+        </li>
+        <li class="user">
+          <a id="user-link" href="#user-scene" onclick="showScene('user-link')"
+            >About</a
+          >
+          <i class="bx bx-info-circle"></i>
+        </li>
+      </ul>
+    </div>
+    <!-- DASHBOARD -->
+    <div id="dashboard-scene" class="scene">
+      <div class="title">
+        <i class="bx bx-grid-alt"></i>
+        <h1>Dashboard</h1>
+      </div>
+      <div class="t-inventory">
+        <p>Total Inventory</p>
+        <p class="total-inventory">800</p>
+      </div>
+      <div class="stock">
+        <p>Low in Stock Items</p>
+        <p class="low-stock">0</p>
+      </div>
+      <div class="no-stock">
+        <p>Out of Stock Items</p>
+        <p class="out-of-stock">0</p>
+      </div>
+      <div class="reminders">
+        <p>Reminders</p>
+        <ul>
+          <li class="reminder-list">Check inventory levels of key items</li>
+          <li class="reminder-list">
+            Follow up on pending orders or deliveries
+          </li>
+          <li class="reminder-list">Conduct maintenance checks on equipment</li>
+          <li class="reminder-list">
+            Prepare for upcoming holidays or special occasions
+          </li>
+          <li class="reminder-list">
+            Review customer feedback and respond accordingly
+          </li>
+          <li class="reminder-list">
+            Evaluate and adjust pricing strategies if necessary
+          </li>
+          <li class="reminder-list">Review sales performance for the week</li>
+        </ul>
+      </div>
+      <div class="bar-charts">
+        <p>Sales</p>
+        <p class="total">₱ 0.00</p>
+      </div>
+      <div class="recent-order">
+        <p>Recent Orders</p>
+        <table class="order-table">
+          <tr>
+            <th>Product</th>
+            <th>Date</th>
+          </tr>
+          <tr>
+            <td class="productName1">-</td>
+            <td class="date1">-</td>
+          </tr>
+          <tr>
+            <td class="productName2">-</td>
+            <td class="date2">-</td>
+          </tr>
+          <tr>
+            <td class="productName3">-</td>
+            <td class="date3">-</td>
+          </tr>
+          <tr>
+            <td class="productName4">-</td>
+            <td class="date4">-</td>
+          </tr>
+          <tr>
+            <td class="productName5">-</td>
+            <td class="date5">-</td>
+          </tr>
+          <tr>
+            <td class="productName6">-</td>
+            <td class="date6">-</td>
+          </tr>
+          <tr>
+            <td class="productName7">-</td>
+            <td class="date7">-</td>
+          </tr>
+          <tr>
+            <td class="productName8">-</td>
+            <td class="date8">-</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- About -->
+    <div id="user-scene" class="scene">
+      <div class="user-title">
+        <h1>About</h1>
+        <i class="bx bx-info-circle"></i>
+        <h1 class="info-title">Shack Grill</h1>
+        <p>
+          When you're seeking scrumptious Filipino grilled fare, look no further
+          than Shack Grill, our dedicated spot for Ihaw Ihaw delights. With its
+          cozy ambiance, our eatery is renowned for its warm service and
+          top-notch cuisine. Our menu exclusively features a variety of grilled
+          specialties prepared with the freshest ingredients, ensuring
+          satisfaction for every diner. Shack Grill has become a beloved
+          destination for Ihaw Ihaw aficionados, offering a distinctive and
+          enjoyable dining experience every time you drop by.
+        </p>
+        <h1 class="info-title">Location</h1>
+        <p>187 Balayong, Malolos, 3000 Bulacan</p>
+        <img src="438204553_1170603224212955_6323704306609595277_n.png" />
+      </div>
+    </div>
+    <!-- INVENTORY -->
+    <div id="inventory-scene" class="scene">
+      <div class="inventory-title">
+        <h1>Inventory</h1>
+        <i class="bx bx-clipboard"></i>
+      </div>
+      <table class="inventory-table">
+        <tr>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>ABC001</td>
+          <td>Paa ng Manok (Raw)</td>
+          <td class="amount1">50</td>
+          <td class="status1">In-Stock</td>
+          <td class="usage1">0</td>
+        </tr>
+        <tr>
+          <td>ABC002</td>
+          <td>Leeg ng Manok (Raw)</td>
+          <td class="amount2">50</td>
+          <td class="status2">In-Stock</td>
+          <td class="usage2">0</td>
+        </tr>
+        <tr>
+          <td>ABC003</td>
+          <td>Hotdog (Raw)</td>
+          <td class="amount3">50</td>
+          <td class="status3">In-Stock</td>
+          <td class="usage3">0</td>
+        </tr>
+        <tr>
+          <td>ABC004</td>
+          <td>Isaw ng Manok (Raw)</td>
+          <td class="amount4">50</td>
+          <td class="status4">In-Stock</td>
+          <td class="usage4">0</td>
+        </tr>
+        <tr>
+          <td>ABC005</td>
+          <td>Hita ng Manok (Raw)</td>
+          <td class="amount5">50</td>
+          <td class="status5">In-Stock</td>
+          <td class="usage5">0</td>
+        </tr>
+        <tr>
+          <td>ABC006</td>
+          <td>Tenga ng Baboy (Raw)</td>
+          <td class="amount6">50</td>
+          <td class="status6">In-Stock</td>
+          <td class="usage6">0</td>
+        </tr>
+        <tr>
+          <td>ABC007</td>
+          <td>Tokwa (Raw)</td>
+          <td class="amount7">50</td>
+          <td class="status7">In-Stock</td>
+          <td class="usage7">0</td>
+        </tr>
+
+        <tr>
+          <td>ABC008</td>
+          <td>Chicken BBQ (Raw)</td>
+          <td class="amount8">50</td>
+          <td class="status8">In-Stock</td>
+          <td class="usage8">0</td>
+        </tr>
+        <tr>
+          <td>ABC009</td>
+          <td>Thin Bamboo Skewer</td>
+          <td class="itemsamount1">300</td>
+          <td class="itemstatus1">In-Stock</td>
+          <td class="itemusage1">0</td>
+        </tr>
+        <tr>
+          <td>ABC010</td>
+          <td>Thick Bamboo Skewer</td>
+          <td class="itemsamount2">100</td>
+          <td class="itemstatus2">In-Stock</td>
+          <td class="itemusage2">0</td>
+        </tr>
+      </table>
+      <div>
+        <button class="restock">Re-Stock</button>
+      </div>
+    </div>
+    <!-- PRODUCTS -->
+    <div id="products-scene" class="scene">
+      <div class="products-title">
+        <h1>Products</h1>
+        <i class="bx bx-box"></i>
+      </div>
+      <div class="product-list">
+        <div class="menu" id="product1">
+          <img src="untitled-design-6.png" />
+          <p>Paa ng Manok (Php 10.00)</p>
+          <div class="container1">
+            <button class="plus1"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity1" placeholder="0" />
+            <button class="minus1"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="product2">
+          <img src="untitled-design-11.png" />
+          <p>Leeg ng Manok (Php 15.00)</p>
+          <div class="container2">
+            <button class="plus2"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity2" placeholder="0" />
+            <button class="minus2"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="product3">
+          <img src="untitled-desgn-5 (1).png" />
+          <p>Inihaw na Hotdog (Php 15.00)</p>
+          <div class="container3">
+            <button class="plus3"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity3" placeholder="0" />
+            <button class="minus3"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="product4">
+          <img src="f0af819cfc9d05500b6c1e4ee2718f06.jpg" />
+          <p>Isaw ng Manok (Php 5.00)</p>
+          <div class="container4">
+            <button class="plus4"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity4" placeholder="0" />
+            <button class="minus4"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="product5">
+          <img src="maxresdefult (1).jpg" />
+          <p>Hita ng Manok (Php 50.00)</p>
+          <div class="container5">
+            <button class="plus5"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity5" placeholder="0" />
+            <button class="minus5"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="product6">
+          <img src="untitled-design-8 (1).png" />
+          <p>Tenga ng Baboy (Php 10.00)</p>
+          <div class="container6">
+            <button class="plus6"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity6" placeholder="0" />
+            <button class="minus6"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="product7">
+          <img src="Vegan Grilled BBQ Tofu (1).jpg" />
+          <p>Inihaw na Tokwa (Php 10.00)</p>
+          <div class="container7">
+            <button class="plus7"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity7" placeholder="0" />
+            <button class="minus7"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="product8">
+          <img src="inihaw-bbq-chicken-skewers-09041 (1).png" />
+          <p>Chicken BBQ (Php 35.00)</p>
+          <div class="container8">
+            <button class="plus8"><i class="bx bx-plus"></i></button>
+            <input type="text" id="quantity8" placeholder="0" />
+            <button class="minus8"><i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="proceed">Order</button>
+      </div>
+      <div id="toast" class="hidden">aasdasdasd</div>
+    </div>
+    <script src="script1.js"></script>
+  </body>
+</html>
